@@ -1,15 +1,15 @@
 ##PhantSaver
-==========
+-------------
 A small elephant screen saver created with Processing. 
 
 Special thanks to Mindzai for allowing me to use their elephant image.
 
 ##Setting Up Screen Saver
-==========
+---------------------------
 Tutorial in the works
 
 ##License
-=========
+---------
 The MIT License (MIT)
 
 Copyright (c) 2015 Hamilton Greene
