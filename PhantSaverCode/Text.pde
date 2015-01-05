@@ -1,7 +1,7 @@
 //Text Class
 //By Hamilton Greene
 
-public class Text
+public class HamText
 {
   private String myString;
   private int opacity; //0 = transparent
@@ -13,7 +13,7 @@ public class Text
   private int textSize;
   private PFont myFont;
   
-  public Text(String myString)
+  public HamText(String myString)
   {
     this.myString = myString;
     opacity = 255;
@@ -22,16 +22,18 @@ public class Text
     rVal = 255;
     gVal = 255;
     bVal = 255;
+    textSize = 48;
   }
   
   public void displayText()
   {
     fill(rVal,gVal,bVal,opacity);
+    textSize(textSize);
     textFont(myFont, textSize);
     text(myString, myX, myY);
   }
   
-//*****Getters and Setters*****  
+//*****Setters*****  
   
   public void setText(String newString)
   {
@@ -78,6 +80,8 @@ public class Text
     myFont = loadFont(newFont);
   }
   
+//*****Getters*****
+  
   public String getText()
   {
     return myString;
@@ -113,4 +117,22 @@ public class Text
     return bVal;
   }
   
+//*****Modifiers*****
+
+  public int decOpacity(int change)
+  {
+    opacity-=change;
+    if(opacity < 0) opacity = 0;
+    return opacity;
+  }
+  
+  public int incOpacity(int change)
+  {
+    opacity+=change;
+    if(opacity > 255) opacity = 255;
+    return opacity;
+  }
+  
 }
+
+void scribe(String S, float x, float y) {fill(255); text(S,x,y); noFill();} // writes on screen at (x,y) with current fill color

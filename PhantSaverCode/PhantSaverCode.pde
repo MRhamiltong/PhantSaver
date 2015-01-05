@@ -15,6 +15,9 @@ public PImage elephantTrunk;
 public PFont myFont;
 public String myText;
 
+public HamText aText;
+public HamText bText;
+
 //*****Initialization*****
 
 //Sets up the environment
@@ -30,9 +33,23 @@ void setup()
   textFinish = false;
   startTime = millis();
   
+  /*
   myFont = loadFont("SegoeUIBlack-48.vlw");
   myText = "PHANTSAVER";
   textOpacity = 0;
+  */
+  
+  aText = new HamText("PHANTSAVER");
+  aText.setFont("SegoeUIBlack-48.vlw");
+  aText.setX(-11*(displayWidth/24));
+  aText.setY(-3*(displayHeight/8));
+  aText.setOpacity(0);
+  
+  bText = new HamText("BY:");
+  bText.setFont("SegoeUIBlack-48.vlw");
+  bText.setX(-11*(displayWidth/24));
+  bText.setY(-3*(displayHeight/8) - 48);
+  bText.setOpacity(0);
 }
 
 //Ensures the sketch is always run in fullscreen
@@ -49,6 +66,8 @@ void draw()
   //Provide exit conditions
   if(mousePressed==true || keyPressed == true) exit();
   background(black);
+  
+  /*
   if(!textFinish)
   {
     if(millis() <= startTime + 5000) textOpacity+=8;
@@ -71,9 +90,43 @@ void draw()
     textFont(myFont, 48);
     text(myText,displayWidth/24, displayHeight/8);
   }
+  */
   
   translate(displayWidth/2,displayHeight/2);  //Set origin to bottom of elephant head
   image(elephantHead, -elephantHead.width/2, -elephantHead.height/2);  //Place elephantHead in center of screen
+  
+  if(!textFinish)
+  {
+    if(millis() <= startTime + 5000) aText.incOpacity(8);
+    else if(millis() <= startTime +7500) aText.decOpacity(8);
+    else if(millis()<= startTime+12000)
+    {
+      aText.setText("HAMY CODES");
+      aText.incOpacity(8);
+      bText.incOpacity(8);
+    }
+    else if(millis() <= startTime+14000) 
+    {
+      aText.decOpacity(8);
+      bText.decOpacity(8);
+    }
+    else if(millis() <= startTime+18500) 
+    {
+      aText.setText("MINDZAI.NET");
+      bText.setText("ART:");
+      aText.incOpacity(8);
+      bText.incOpacity(8);
+    }
+    else if(millis() <= startTime +22000) 
+    {
+      aText.decOpacity(8);
+      bText.decOpacity(8);
+    }
+    else if(millis() >= startTime + 24000) textFinish = true;
+    
+    aText.displayText();
+    bText.displayText();
+  }
   
   swing(10);
 }
