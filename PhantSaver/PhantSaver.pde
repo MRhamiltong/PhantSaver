@@ -161,5 +161,5 @@ void swing(int travelTime)
 //More exit conditions for mouse movement
 void mouseMoved()
 {
-  if(abs(mouseX-pmouseX) > displayWidth/12 || abs(mouseY-pmouseY) > displayHeight/12) exit();
+  //if(abs(mouseX-pmouseX) > displayWidth/12 || abs(mouseY-pmouseY) > displayHeight/12) exit();
 }
