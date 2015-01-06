@@ -1,4 +1,4 @@
-//Text Class
+//Text Class v.0.0.1
 //By Hamilton Greene
 
 public class HamText

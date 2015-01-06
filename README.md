@@ -1,8 +1,10 @@
 ##PhantSaver
 
-A small elephant screen saver created with Processing. 
+A small elephant screen saver created with Processing.  Does it actually save your screen?  Probably not.  But I thought it looked cool, so I wanted it on my monitor.  
 
-Special thanks to Mindzai for allowing me to use their elephant image.
+I couldn't decide what to put on the end of the elephant's trunk, so I decided to give Hucci a shoutout and add his logo to the image.  If you have any suggestions about what might fit better, feel free to drop me a line - or implement it yourself.  Either way, I'd love to get your feedback and see what you've done with the code.
+
+I'd like to give a special thanks to Mindzai for allowing me to use their elephant image.  If you feel so inclined, you should drop by their site to check out all the other cool images they've created.
 
 ##Setting Up Screen Saver
 

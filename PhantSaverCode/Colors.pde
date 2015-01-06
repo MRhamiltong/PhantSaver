@@ -1,5 +1,5 @@
 /*
-All things Colors
+All things Colors v.0.0.1
 Author: Hamilton Greene
 Copyright 2014
 */
