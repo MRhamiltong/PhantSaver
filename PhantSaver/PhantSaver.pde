@@ -37,23 +37,25 @@ void setup()
   
   //Set up text classes
   aText = new HamText("PHANTSAVER");
-  aText.setFont("SegoeUIBlack-48.vlw");
+  aText.setFont("Resources/SegoeUIBlack-48.vlw");
   aText.setX(-11*(displayWidth/24));
   aText.setY(-3*(displayHeight/8));
   aText.setOpacity(0);
   
   bText = new HamText("BY:");
-  bText.setFont("SegoeUIBlack-48.vlw");
+  bText.setFont("Resources/SegoeUIBlack-48.vlw");
   bText.setX(-11*(displayWidth/24));
   bText.setY(-3*(displayHeight/8) - 48);
   bText.setOpacity(0);
 }
+
 
 //Ensures the sketch is always run in fullscreen
 boolean sketchFullScreen() 
 {
   return true;
 }
+
 
 //*****Body*****
 
